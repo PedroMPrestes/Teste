@@ -25,6 +25,10 @@ int register_chrdev(unsigned int major, const char *name, struct file_operations
 
 #define DEVICE_NAME "chardrv"
 
+static ssize_t chardrv_read   (struct  file *,       char __user *, size_t, loff_t *);
+static ssize_t chardrv_write  (struct  file *, const char __user *, size_t, loff_t *);
+static int     chardrv_open   (struct inode *, struct file *);
+static int     chardrv_release(struct inode *, struct file *);
 
 static struct file_operations fops =
 {
@@ -41,14 +45,6 @@ static size_t size_of_message = 0;
 static unsigned int max_size = 256;
 module_param(max_size, uint, 0444);
 MODULE_PARM_DESC(max_size, "Tamanho maximo de cada mensagem, em bytes");
-
-
-static ssize_t chardrv_read   (struct  file *,       char __user *, size_t, loff_t *);
-static ssize_t chardrv_write  (struct  file *, const char __user *, size_t, loff_t *);
-static int     chardrv_open   (struct inode *, struct file *);
-static int     chardrv_release(struct inode *, struct file *);
-
-
 
 static ssize_t chardrv_read(struct file *filep, char __user *buffer, size_t len, loff_t *offset)
 {
