@@ -1,0 +1,1 @@
+savedcmd_/workspaces/codespaces-blank/buildroot-2025.02.16/modules/waitdrv/Module.symvers :=  scripts/mod/modpost -M        -o /workspaces/codespaces-blank/buildroot-2025.02.16/modules/waitdrv/Module.symvers -T /workspaces/codespaces-blank/buildroot-2025.02.16/modules/waitdrv/modules.order -i Module.symvers -e 
