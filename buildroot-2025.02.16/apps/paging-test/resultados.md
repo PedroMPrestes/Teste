@@ -45,4 +45,14 @@ munmap   minflt = 0      majflt = 0      VmRSS = 1476 kB
 
 ## Questão 3
 
--
+- Em qual etapa ocorrem as faltas nos modos populate e mlock? Por que uma aplicação de tempo real prefere esse comportamento?
+    R: populate -> mmap | Mlock -> mlock; Para evitar falta de paginas durante a excução, reduzindo atrasos.
+
+- Por que o modo huge gera 8 faltas, e quantas faltas ocorreriam com 32 MiB em páginas grandes de 2 MB (x86_64)?
+    R: Pois foi alocado 8 paginas; ocorreriam 16 faltas ( 2 MiB por falta)
+
+- Por que o modo file com cache frio gera faltas maiores, e por que o total de faltas é bem menor que o número de páginas?
+    R: Pois não estão em cache, precisam ser lidas do disco; Por conta da leitura antecipada (read-ahead) do OS do linux
+
+- Por que o VmRSS não aumenta no modo huge? Em qual campo de /proc/<pid>/status essa memória aparece? (consulte man 5 proc)
+    R:Porque não são contabilizadas da mesma forma que paginas no RSS; A memória aparece no "HugetlbPages"
