@@ -4,7 +4,7 @@
 
 int main (void) {
     int n = 0;
-    char *p;
+    volatile char *p;
 
     while (1) {
         if ((p = malloc(1<<20)) == NULL) {
