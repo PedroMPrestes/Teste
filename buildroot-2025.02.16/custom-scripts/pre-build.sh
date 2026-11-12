@@ -19,11 +19,18 @@ make -C $BASE_DIR/../apps/banner
 #make -C $BASE_DIR/../apps/sched-burn
 #make -C $BASE_DIR/../apps/sched-rt
 #make -C $BASE_DIR/../apps/schedrt-dl
-#==========Discoo=============
+#==========Discoo============= 3.x
 #make -C $BASE_DIR/../apps/disk-test-raw
 #make -C $BASE_DIR/../apps/disk-test-sector-read
 #make -C $BASE_DIR/../apps/disk-test
-#=============
+#==========Mem-teste 4.1
+make -C $BASE_DIR/../apps/mem-test-malloc
+make -C $BASE_DIR/../apps/mem-test-write
+make -C $BASE_DIR/../apps/mem-test-read
+make -C $BASE_DIR/../apps/mem-test-ulimit
+#=++++++++++++Segmentacao 4.2
+make -C $BASE_DIR/../apps/segments-address
+make -C $BASE_DIR/../apps/segments-symbols
 
 
 
