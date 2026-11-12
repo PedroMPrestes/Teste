@@ -6,7 +6,6 @@ cat  /proc/sys/vm/overcommit_memory
 1
 '''
 
-
 - #mem-test-write
 
 ....
@@ -14,7 +13,6 @@ got 134 MiB
 got 135 MiB
 got 136 MiB
 Killed
-
 
 - #mem-test-read
 ...
