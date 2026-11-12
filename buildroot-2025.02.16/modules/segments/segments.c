@@ -23,10 +23,13 @@ static void print_mem(struct task_struct *task){
 
 	printk("Segmento de Codigo start = 0x%lx, end = 0x%lx\n"
 		"Segmento de Dados  start = 0x%lx, end = 0x%lx\n"
-		"Segmento de Pilha  start = 0x%lx\n",
+		"Segmento de Pilha  start = 0x%lx\n"
+		"Segmento do Heap   start = 0x%lx , end =0x%lx\n",
 		mm->start_code, mm->end_code,
 		mm->start_data, mm->end_data,
-		mm->start_stack);
+		mm->start_stack,
+		mm->start_brk, mm->brk
+	);
 }
 
 static ssize_t segments_write(struct file *file, const char __user *buf,

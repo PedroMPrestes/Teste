@@ -5,13 +5,13 @@ cat $BASE_DIR/../custom-scripts/network-config | sed 's/\[IP-DO-HOST\]/'"$HOST"'
 chmod +x $BASE_DIR/../overlay/etc/init.d/S41network-config
 
 #=====Modulos =====
-#make -C $BASE_DIR/../modules/hello
-#make -C $BASE_DIR/../modules/miscdrv
-#make -C $BASE_DIR/../modules/procdrv
+make -C $BASE_DIR/../modules/hello
+make -C $BASE_DIR/../modules/miscdrv
+make -C $BASE_DIR/../modules/procdrv
 #make -C $BASE_DIR/../modules/timerdrv 
-#make -C $BASE_DIR/../modules/chardriver
-#make -C $BASE_DIR/../modules/waitdrv
-#make -C $BASE_DIR/../modules/segments
+make -C $BASE_DIR/../modules/chardriver
+make -C $BASE_DIR/../modules/waitdrv
+make -C $BASE_DIR/../modules/segments
 #=====Apps========================
 make -C $BASE_DIR/../apps/banner
 #make -C $BASE_DIR/../apps/monitor
