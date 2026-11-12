@@ -1,0 +1,1 @@
+for dir in */; do     echo "Limpando $dir";     make -C "$dir" clean; done
