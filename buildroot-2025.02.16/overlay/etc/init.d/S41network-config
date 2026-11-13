@@ -7,8 +7,8 @@ case "$1" in
         printf "Configuring host communication."
         /sbin/ip addr add 192.168.1.10/24 dev eth0
         /sbin/ip link set dev eth0 up
-        /sbin/ip route add 10.0.13.170 dev eth0
-        /sbin/ip route add default via 10.0.13.170
+        /sbin/ip route add 10.0.12.235 dev eth0
+        /sbin/ip route add default via 10.0.12.235
         [ $? = 0 ] && echo "OK" || echo "FAIL"
         ;;
     stop)
